@@ -1,0 +1,115 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #FFFAF0;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #FF4500;
+    text-shadow: 2px 2px #FFD700;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+#reset, #theme {
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid #FF4500;
+    background-color: #FFD700;
+    border-radius: 10px;
+    color: #FF4500;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#reset:hover, #theme:hover {
+    background-color: #FF4500;
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+#game-container {
+    position: relative;
+}
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    background-color: #FF6347;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #FFF8DC;
+    background-color: #FFF8DC;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cell.X {
+    color: #32CD32;
+    text-shadow: 2px 2px #FFF8DC;
+}
+
+.cell.O {
+    color: #1E90FF;
+    text-shadow: 2px 2px #FFF8DC;
+}
+
+.cell:hover {
+    background-color: #FFD700;
+    transform: scale(1.1);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #FF4500;
+    text-shadow: 2px 2px #FFD700;
+}
+
+/* Themes */
+body.default {
+    background-color: #FFFAF0;
+}
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark .cell {
+    border-color: white;
+    background-color: #666;
+}
+
+body.neon {
+    background-color: black;
+    color: neon;
+}
+
+body.neon .cell {
+    border-color: neon;
+    background-color: #0f0f0f;
+}
